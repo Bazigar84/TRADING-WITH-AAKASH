@@ -3,99 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRADING WITH AAKASH</title>
-<meta name="description" content="Trading With Aakash - Join our free Telegram community for market insights, learning and practical strategies.">
-<meta property="og:title" content="TRADING WITH AAKASH">
-<meta property="og:description" content="Free Telegram community: Market Insights, Learn with Experts, Practical Strategies.">
+<title>TRADE FINDER</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:'Poppins',-apple-system,Segoe UI,Arial,sans-serif;
-    min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
-    padding:24px 16px;color:#fff;
-    background:
-      linear-gradient(rgba(10,10,10,.88),rgba(10,10,10,.92)),
-      repeating-linear-gradient(45deg,#161616 0 14px,#111 14px 28px);
-    background-color:#0d0d0d;
-  }
-  .card{
-    width:100%;max-width:440px;background:#222;border:1px solid #333;border-radius:20px;
-    padding:34px 22px 26px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6);
-  }
-  .avatar{
-    width:96px;height:96px;border-radius:50%;margin:0 auto 18px;
-    border:3px solid #fbbf24;overflow:hidden;background:#333;
-    display:grid;place-items:center;font-size:34px;font-weight:800;color:#fbbf24;
-  }
-  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-  h1{
-    font-size:clamp(24px,7vw,32px);font-weight:800;color:#fbbf24;letter-spacing:.3px;
-    text-transform:uppercase;line-height:1.2;
-  }
-  h1 .crown{font-size:.85em}
-  .trust{margin-top:14px;font-size:14.5px;color:#e5e5e5;display:flex;justify-content:center;align-items:center;gap:8px}
-  .tick{
-    width:18px;height:18px;border-radius:4px;background:#22c55e;color:#fff;
-    display:inline-grid;place-items:center;font-size:12px;font-weight:700;flex:none
-  }
-  .pills{display:flex;justify-content:center;gap:10px;margin:18px 0 28px;flex-wrap:wrap}
-  .pill{background:#333;border-radius:10px;padding:11px 18px;font-size:13px;font-weight:700}
-
-  /* ===== Telegram button: animation + hover ===== */
-  .btn{
-    position:relative;overflow:hidden;
-    display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;
-    background:linear-gradient(90deg,#0a6cff,#00c6ff,#0a6cff);background-size:200% 100%;
-    color:#fff;font-weight:700;font-size:17px;
-    padding:15px 34px;border-radius:999px;box-shadow:0 8px 24px rgba(0,140,255,.35);
-    transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,letter-spacing .25s;
-    animation:pulse 2.2s infinite, floaty 3s ease-in-out infinite, gradmove 4s linear infinite;
-    -webkit-tap-highlight-color:transparent;
-  }
-  /* shine sweep */
-  .btn::before{
-    content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;
-    background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);
-    transform:skewX(-20deg);animation:shine 3s ease-in-out infinite;
-  }
-  .btn svg{width:22px;height:22px;fill:#fff;transition:transform .3s;position:relative}
-  .btn span{position:relative}
-  .btn:hover{
-    transform:translateY(-4px) scale(1.07);letter-spacing:.4px;
-    box-shadow:0 14px 34px rgba(0,170,255,.65);
-    animation-play-state:paused,paused,running;
-  }
-  .btn:hover svg{transform:translateX(4px) rotate(-12deg) scale(1.15)}
-  .btn:hover::before{animation-duration:.9s}
-  .btn:active{transform:translateY(0) scale(.97);box-shadow:0 4px 14px rgba(0,140,255,.5)}
-  .btn:focus-visible{outline:3px solid #fbbf24;outline-offset:4px}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,160,255,.5)}70%{box-shadow:0 0 0 16px rgba(0,160,255,0)}100%{box-shadow:0 0 0 0 rgba(0,160,255,0)}}
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-  @keyframes shine{0%{left:-75%}55%,100%{left:130%}}
-  @keyframes gradmove{0%{background-position:0% 50%}100%{background-position:200% 50%}}
-  @media (prefers-reduced-motion:reduce){
-    .btn,.btn::before{animation:none}
-  }
-
-  .list{margin-top:34px;display:flex;flex-direction:column;gap:12px;text-align:left}
-  .item{
-    display:flex;align-items:center;gap:10px;background:#2a2a2a;border:1px solid #3a3a3a;
-    border-radius:12px;padding:14px 14px;font-size:14px;font-weight:600
-  }
-  .dot{
-    width:20px;height:20px;border-radius:50%;background:#22c55e;color:#06210f;
-    display:grid;place-items:center;font-size:12px;font-weight:800;flex:none
-  }
-  .disc{margin-top:22px;font-size:11.5px;color:#8a8a8a;line-height:1.5}
-  .legal{margin-top:14px;padding-top:14px;border-top:1px solid #333;font-size:11px;color:#8a8a8a;line-height:1.55}
-  .legal strong{color:#bdbdbd}
-  .ads{margin-top:22px;font-size:13px;color:#9a9a9a;text-align:center}
-  .ads a{color:#fbbf24;font-weight:700;text-decoration:none}
-  .ads a:hover{text-decoration:underline}
-</style>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -107,57 +18,123 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2063075191047462');
+fbq('init', '2463707887742914');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2063075191047462&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=2463707887742914&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{min-height:100%}
+  body{
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    background-color:#141414;
+    background-image:
+      linear-gradient(30deg,#1b1b1b 12%,transparent 12.5%,transparent 87%,#1b1b1b 87.5%,#1b1b1b),
+      linear-gradient(150deg,#1b1b1b 12%,transparent 12.5%,transparent 87%,#1b1b1b 87.5%,#1b1b1b),
+      linear-gradient(30deg,#1b1b1b 12%,transparent 12.5%,transparent 87%,#1b1b1b 87.5%,#1b1b1b),
+      linear-gradient(150deg,#1b1b1b 12%,transparent 12.5%,transparent 87%,#1b1b1b 87.5%,#1b1b1b),
+      linear-gradient(60deg,#222 25%,transparent 25.5%,transparent 75%,#222 75%,#222),
+      linear-gradient(60deg,#222 25%,transparent 25.5%,transparent 75%,#222 75%,#222);
+    background-size:40px 70px;
+    background-position:0 0,0 0,20px 35px,20px 35px,0 0,20px 35px;
+    display:flex;align-items:center;justify-content:center;
+    padding:20px;
+  }
+  .wrap{width:100%;max-width:520px}
+  .card{
+    background:linear-gradient(180deg,#262626,#1e1e1e);
+    border:1px solid #3a3a3a;
+    border-radius:22px;
+    padding:32px 22px 28px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(0,0,0,.55);
+  }
+  .avatar{
+    width:96px;height:96px;border-radius:50%;
+    border:3px solid #ffc400;
+    object-fit:cover;background:#e8e8e8;
+    display:block;margin:0 auto 18px;
+  }
+  h1{
+    font-size:28px;font-weight:800;letter-spacing:.3px;
+    color:#ffc400;text-transform:uppercase;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+  }
+  h1 .crown{font-size:26px}
+  .trusted{margin-top:10px;font-size:14px;color:#d8d8d8;display:flex;align-items:center;justify-content:center;gap:6px}
+  .tick{
+    display:inline-flex;width:16px;height:16px;border-radius:3px;
+    background:#2ecc71;color:#fff;font-size:12px;align-items:center;justify-content:center;font-weight:700
+  }
+  .badges{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .badge{
+    background:#333;border:1px solid #444;border-radius:10px;
+    padding:10px 16px;font-size:12.5px;font-weight:600;
+  }
+  .join{
+    margin:28px auto 26px;
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    background:linear-gradient(90deg,#0a6cff,#00c6ff);
+    color:#fff;text-decoration:none;font-weight:700;font-size:16px;
+    padding:14px 34px;border-radius:40px;
+    box-shadow:0 8px 22px rgba(0,140,255,.35);
+    transition:transform .2s ease,box-shadow .2s ease;
+    animation:pulse 2s infinite;
+  }
+  .join:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 30px rgba(0,170,255,.55)}
+  .join svg{width:18px;height:18px;fill:#fff}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(0,170,255,.55)}
+    70%{box-shadow:0 0 0 16px rgba(0,170,255,0)}
+    100%{box-shadow:0 0 0 0 rgba(0,170,255,0)}
+  }
+  .list{display:flex;flex-direction:column;gap:12px;text-align:left}
+  .item{
+    background:#2f2f2f;border:1px solid #444;border-radius:10px;
+    padding:12px 12px;font-size:13.5px;font-weight:500;
+    display:flex;align-items:center;gap:8px;
+  }
+  .dot{
+    flex:0 0 auto;width:16px;height:16px;border-radius:50%;
+    background:#1ee27a;color:#0b2b1a;font-size:10px;font-weight:800;
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  footer{margin-top:18px;text-align:center;font-size:12px;color:#8d8d8d}
+</style>
 </head>
 <body>
+  <div class="wrap">
+    <div class="card">
+      <img class="avatar" src="profile.jpg" alt="Trade Finder"
+           onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 96 96%22><rect width=%2296%22 height=%2296%22 fill=%22%23e8e8e8%22/><circle cx=%2248%22 cy=%2236%22 r=%2216%22 fill=%22%23999%22/><path d=%22M16 96c0-20 14-32 32-32s32 12 32 32z%22 fill=%22%23999%22/></svg>'">
 
-<div class="card">
-  <!-- Apni photo lagane ke liye: profile.jpg file isi folder me rakhein -->
-  <div class="avatar">
-    <img src="profile.jpg" alt="Aakash" onerror="this.remove();this.parentNode.textContent='A'">
+      <h1><span class="crown">👑</span> Trade Finder <span class="crown">👑</span></h1>
+
+      <p class="trusted"><span class="tick">✓</span> Trusted by thousands of learners</p>
+
+      <div class="badges">
+        <span class="badge">24/7 Updates</span>
+        <span class="badge">Free to Join</span>
+      </div>
+
+      <a class="join" href="https://t.me/+wjY2v9a3fHc0MDg1" target="_blank" rel="noopener"
+         onclick="try{fbq('track','Lead')}catch(e){}">
+        <svg viewBox="0 0 24 24"><path d="M9.78 15.17l-.4 4.2c.57 0 .82-.25 1.12-.54l2.68-2.56 5.56 4.07c1.02.57 1.74.27 2-.94l3.62-16.97c.33-1.5-.54-2.08-1.53-1.72L1.5 10.9c-1.47.57-1.45 1.39-.25 1.76l5.45 1.7L19.4 6.4c.6-.4 1.15-.18.7.22z"/></svg>
+        Join on Telegram
+      </a>
+
+      <div class="list">
+        <div class="item"><span class="dot">✓</span> Market Insights &amp; Discussions</div>
+        <div class="item"><span class="dot">✓</span> Learn with Experts</div>
+        <div class="item"><span class="dot">✓</span> Practical Strategies</div>
+      </div>
+    </div>
+    <footer>Ad manage by Karan Agency</footer>
   </div>
-
-  <h1><span class="crown">👑</span> TRADING WITH AAKASH <span class="crown">👑</span></h1>
-
-  <div class="trust"><span class="tick">✓</span> Join our growing learning community</div>
-
-  <div class="pills">
-    <div class="pill">24/7 Updates</div>
-    <div class="pill">Free to Join</div>
-  </div>
-
-  <a class="btn" href="https://t.me/+wjY2v9a3fHc0MDg1" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24"><path d="M9.78 15.57l-.4 5.6c.57 0 .82-.25 1.12-.54l2.69-2.57 5.58 4.09c1.02.57 1.75.27 2.03-.94l3.67-17.2c.33-1.52-.55-2.12-1.54-1.75L1.38 10.5C-.1 11.08-.08 11.9 1.12 12.27l5.5 1.72L19.4 6c.6-.4 1.15-.18.7.22z"/></svg>
-    <span>Join on Telegram</span>
-  </a>
-
-  <div class="list">
-    <div class="item"><span class="dot">✓</span> Market Insights &amp; Discussions</div>
-    <div class="item"><span class="dot">✓</span> Learn with Experts</div>
-    <div class="item"><span class="dot">✓</span> Practical Strategies</div>
-  </div>
-
-  <p class="disc">Disclaimer: Trading mein risk hota hai. Ye content sirf educational purpose ke liye hai, investment advice nahi. Apna research karein ya SEBI-registered advisor se salah lein.</p>
-
-  <p class="legal"><strong>18+ Warning &amp; Legal Notice:</strong> All content provided on this page is strictly for informational &amp; educational purposes. We do not provide or facilitate real-money gambling.<br>Not affiliated with or endorsed by WhatsApp or Meta Platforms Inc.</p>
-</div>
-
-<p class="ads">Ads by <a href="https://t.me/Digitalsameerads" target="_blank" rel="noopener">@Digitalsameerads</a></p>
-
-<script>
-  // Telegram button click par Meta "Lead" event
-  document.querySelectorAll('a.btn').forEach(function(a){
-    a.addEventListener('click', function(){
-      try { fbq('track', 'Lead'); } catch(e) {}
-    });
-  });
-</script>
-
 </body>
 </html>
